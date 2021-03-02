@@ -1,0 +1,804 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  background-color: #f2f2f2;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+  background-color: #ffd5e8;
+}
+
+h1 {
+  display: block;
+}
+@media (min-width: 768px) {
+  h1 {
+    display: none;
+  }
+}
+
+.container {
+  max-width: 800px;
+  width: 90%;
+  margin: auto;
+  height: 100vh;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (min-width: 768px) {
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.first-row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 228px 252px 316px;
+  grid-template-columns: 228px 252px 316px;
+  width: 100%;
+  height: 170px;
+  border: 2px solid #162645;
+  z-index: 0;
+}
+.first-row .first-square {
+  background-color: #75c3d1;
+  position: relative;
+  border: 2px solid #162645;
+}
+.first-row .first-square .edificio {
+  width: 95px;
+  height: 130px;
+  border-right: 4px solid #162645;
+  border-top: 4px solid #162645;
+  background-color: #f9b3d3;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.first-row .first-square .edificio .window {
+  width: 22px;
+  height: 38px;
+  background-color: #162645;
+  border-radius: 6px;
+}
+.first-row .first-square .edificio-bottom {
+  width: 133px;
+  height: 70px;
+  border-top: 4px solid #162645;
+  border-left: 4px solid #162645;
+  background-color: #162645;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.first-row .first-square .edificio-top {
+  width: 65px;
+  height: 60px;
+  border-top: 4px solid #162645;
+  border-left: 4px solid #162645;
+  border-right: 4px solid #162645;
+  background-color: #ff4794;
+  position: absolute;
+  right: 68px;
+  bottom: 70px;
+}
+.first-row .second-square {
+  border: 2px solid #162645;
+  position: relative;
+  overflow: hidden;
+  background-color: #75c3d1;
+}
+.first-row .second-square .triangle-top {
+  width: 120px;
+  height: 120px;
+  background-color: #f9b3d3;
+  border-top: 4px solid #162645;
+  border-right: 4px solid #162645;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  top: 20px;
+  left: -60px;
+  z-index: 10;
+}
+.first-row .second-square .triangle-bottom {
+  width: 124px;
+  height: 124px;
+  background-color: white;
+  border-top: 4px solid #162645;
+  border-left: 2px solid #162645;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  bottom: -66px;
+  left: 22px;
+}
+.first-row .second-square .edificio-top {
+  width: 245px;
+  height: 40px;
+  background-color: #ff4794;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.first-row .second-square .edificio-top .window {
+  width: 26px;
+  height: 26px;
+  background-color: #162645;
+  margin-right: 26px;
+  border-radius: 4px;
+}
+.first-row .second-square .techo-edificio {
+  width: 245px;
+  height: 30px;
+  background-color: #162645;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  z-index: 1;
+}
+.first-row .second-square .bg-white {
+  width: 82px;
+  height: 118px;
+  position: absolute;
+  border-left: 4px solid #162645;
+  bottom: 0;
+  right: 0;
+  background-color: white;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.first-row .second-square .bg-white .circle-container {
+  width: 82px;
+  height: 82px;
+  border: 5px solid #162645;
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f9b3d3;
+}
+.first-row .second-square .bg-white .circle-container .circle-white {
+  width: 40px;
+  height: 40px;
+  border: 5px solid #162645;
+  background-color: #ff4794;
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+}
+.first-row .second-square .bg-white .line-vertical {
+  width: 4px;
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+  left: 37px;
+  background-color: #162645;
+}
+.first-row .thirth-square {
+  border: 2px solid #162645;
+  position: relative;
+  background-color: #75c3d1;
+  overflow: hidden;
+  z-index: 1;
+}
+.first-row .thirth-square .house {
+  width: 230px;
+  height: 75px;
+  background-color: #ff4794;
+  border-top: 4px solid #162645;
+  border-right: 4px solid #162645;
+  position: absolute;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  z-index: 100;
+}
+.first-row .thirth-square .house .window {
+  width: 32px;
+  height: 32px;
+  background-color: #162645;
+  border-radius: 4px;
+}
+.first-row .thirth-square .techo {
+  width: 280px;
+  height: 40px;
+  position: absolute;
+  background-color: #f9b3d3;
+  border-top: 4px solid #162645;
+  border-right: 6px solid #162645;
+  left: -74px;
+  -webkit-transform: skew(50deg);
+      -ms-transform: skew(50deg);
+          transform: skew(50deg);
+  bottom: 75px;
+  z-index: 100;
+}
+.first-row .thirth-square .edificio-left {
+  width: 100px;
+  height: 100px;
+  background-color: #162645;
+  border-radius: 4px;
+  position: absolute;
+  right: 56px;
+  bottom: 0;
+  z-index: 10;
+}
+.first-row .thirth-square .edificio-center {
+  width: 100px;
+  height: 50px;
+  background-color: #162645;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+.first-row .thirth-square .edificio-right {
+  width: 40px;
+  height: 130px;
+  background-color: #162645;
+  border-top-left-radius: 4px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+
+.second-row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 226px 172px 394px;
+  grid-template-columns: 226px 172px 394px;
+  -ms-grid-rows: 90px 130px 50px;
+  grid-template-rows: 90px 130px 50px;
+  border-bottom: 4px solid #162645;
+  border-left: 4px solid #162645;
+  border-right: 4px solid #162645;
+}
+
+.second-row > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.second-row > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+}
+
+.second-row > *:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+
+.second-row > *:nth-child(4) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+}
+
+.second-row > *:nth-child(5) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+}
+
+.second-row > *:nth-child(6) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+}
+
+.second-row > *:nth-child(7) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+
+.second-row > *:nth-child(8) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+}
+
+.second-row > *:nth-child(9) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+}
+.second-row .first-square {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  position: relative;
+  background-color: #f9b3d3;
+  border-bottom: 4px solid #162645;
+  border-right: 4px solid #162645;
+}
+.second-row .first-square .bg-white {
+  width: 94px;
+  height: 45px;
+  background-color: white;
+  border-bottom: 4px solid #162645;
+  border-right: 4px solid #162645;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.second-row .first-square .bg-pink-hard {
+  width: 128px;
+  height: 45px;
+  background-color: #ff4794;
+  border-bottom: 4px solid #162645;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.second-row .first-square .bg-blue-light {
+  width: 45px;
+  height: 41px;
+  background-color: #b2c3e6;
+  border-right: 4px solid #162645;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.second-row .second-square {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  position: relative;
+  background-color: #ff4794;
+  border-bottom: 4px solid #162645;
+  border-right: 4px solid #162645;
+  overflow: hidden;
+}
+.second-row .second-square .big-circle {
+  width: 176px;
+  height: 168px;
+  border: 4px solid #162645;
+  border-radius: 50%;
+  position: absolute;
+  left: -4px;
+  overflow: hidden;
+  background-color: #f9b3d3;
+}
+.second-row .second-square .big-circle .small-circle {
+  width: 88px;
+  height: 88px;
+  border: 4px solid #162645;
+  background-color: white;
+  position: absolute;
+  border-radius: 50%;
+  left: 40px;
+  bottom: 28px;
+  overflow: hidden;
+}
+.second-row .second-square .big-circle .line-left {
+  width: 4px;
+  height: 100px;
+  background-color: #162645;
+  position: absolute;
+  left: 50px;
+  bottom: 58px;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.second-row .second-square .big-circle .line-right {
+  width: 4px;
+  height: 100px;
+  background-color: #162645;
+  position: absolute;
+  right: 50px;
+  bottom: 58px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.second-row .second-square .big-circle .line-center {
+  width: 4px;
+  height: 105px;
+  background-color: #162645;
+  position: absolute;
+  left: 82px;
+  bottom: 58px;
+}
+.second-row .thirth-square {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+  position: relative;
+  background-color: #f9b3d3;
+  border-bottom: 4px solid #162645;
+  overflow: hidden;
+}
+.second-row .thirth-square .left-tower {
+  position: absolute;
+  background-color: #ff4794;
+  width: 60px;
+  height: 130px;
+  bottom: 0;
+  border-top: 4px solid #162645;
+  overflow: hidden;
+}
+.second-row .thirth-square .left-tower .bg-hard-blue {
+  position: absolute;
+  width: 80px;
+  height: 210px;
+  background-color: #162645;
+  left: 0px;
+  bottom: -30px;
+  -webkit-transform: rotate(55deg);
+      -ms-transform: rotate(55deg);
+          transform: rotate(55deg);
+}
+.second-row .thirth-square .left-tower .bg-hard-blue-top {
+  position: absolute;
+  width: 60px;
+  height: 40px;
+  background-color: #162645;
+}
+.second-row .thirth-square .center-tower {
+  position: absolute;
+  background-color: #ff4794;
+  width: 40px;
+  height: 90px;
+  bottom: 0;
+  left: 60px;
+  border-top: 4px solid #162645;
+  overflow: hidden;
+}
+.second-row .thirth-square .center-tower .bg-hard-blue {
+  position: absolute;
+  width: 80px;
+  height: 40px;
+  background-color: #162645;
+  top: -12px;
+  left: -20px;
+  -webkit-transform: rotate(-34deg);
+      -ms-transform: rotate(-34deg);
+          transform: rotate(-34deg);
+}
+.second-row .thirth-square .right-tower {
+  position: absolute;
+  background-color: #ff4794;
+  width: 75px;
+  height: 158px;
+  bottom: 0;
+  left: 100px;
+  border-top: 4px solid #162645;
+  border-right: 4px solid #162645;
+  overflow: hidden;
+  z-index: 10;
+}
+.second-row .thirth-square .right-tower .bg-hard-blue {
+  position: absolute;
+  width: 54px;
+  height: 72px;
+  background-color: #162645;
+  top: 16px;
+  left: -40px;
+  -webkit-transform: rotate(-34deg);
+      -ms-transform: rotate(-34deg);
+          transform: rotate(-34deg);
+  border-radius: 2px;
+}
+.second-row .thirth-square .right-tower .bg-hard-blue-top {
+  position: absolute;
+  width: 30px;
+  height: 67px;
+  border-bottom-right-radius: 2px;
+  background-color: #162645;
+}
+.second-row .thirth-square .right-tower .window {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background-color: #162645;
+  border-radius: 3px;
+  bottom: 15px;
+  right: 25px;
+}
+.second-row .thirth-square .left-box-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 219px;
+  height: 90px;
+  background-color: #162645;
+  border-top: 4px solid #162645;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[6];
+  grid-template-columns: repeat(6, 1fr);
+  z-index: 10;
+}
+.second-row .thirth-square .left-box-container .first-box-large {
+  height: 100%;
+  background-color: #75c3d1;
+  margin-right: 4px;
+}
+.second-row .thirth-square .left-box-container .second-box-large {
+  height: 100%;
+  background-color: #f9b3d3;
+  margin-right: 4px;
+}
+.second-row .thirth-square .left-box-container .thirth-box-large {
+  height: 100%;
+  background-color: #75c3d1;
+  margin-right: 4px;
+}
+.second-row .thirth-square .left-box-container .fourth-box-large {
+  height: 100%;
+  background-color: #f9b3d3;
+  margin-right: 4px;
+}
+.second-row .thirth-square .left-box-container .fiveth-box-large {
+  height: 100%;
+  background-color: #75c3d1;
+  margin-right: 4px;
+}
+.second-row .thirth-square .left-box-container .sixth-box-large {
+  height: 100%;
+  background-color: #f9b4d3;
+}
+.second-row .thirth-square .top-box {
+  position: absolute;
+  right: 0;
+  bottom: 90px;
+  width: 219px;
+  height: 25px;
+  background-color: #162645;
+  z-index: 10;
+}
+.second-row .thirth-square .triangle-right {
+  position: absolute;
+  right: 0px;
+  top: 10px;
+  background-color: #ff4794;
+  border: 4px solid #162645;
+  width: 190px;
+  height: 288px;
+  -webkit-transform: rotate(68deg);
+      -ms-transform: rotate(68deg);
+          transform: rotate(68deg);
+  z-index: 1;
+}
+.second-row .thirth-square .vertical-line {
+  width: 4px;
+  height: 90px;
+  position: absolute;
+  top: 0;
+  left: 37px;
+  background-color: #162646;
+}
+.second-row .fourth-square {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  position: relative;
+  background-color: white;
+  border-right: 4px solid #162645;
+  border-bottom: 4px solid #162645;
+}
+.second-row .fourth-square .container-circle {
+  width: 150px;
+  height: 100%;
+  background-color: #162645;
+}
+.second-row .fourth-square .container-circle .big-circle {
+  position: absolute;
+  top: 1px;
+  left: 8px;
+  width: 125px;
+  height: 125px;
+  background-color: white;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.second-row .fourth-square .container-circle .big-circle .medium-circle {
+  width: 76px;
+  height: 76px;
+  background-color: #ff4794;
+  border: 4px solid #162645;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.second-row .fourth-square .container-circle .big-circle .small-circle {
+  width: 34px;
+  height: 34px;
+  background-color: #162645;
+  border-radius: 50%;
+}
+.second-row .fourth-square .pink-hard {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 38px;
+  height: 65px;
+  background-color: #ff4794;
+  border-top: 4px solid #162645;
+  border-left: 4px solid #162645;
+}
+.second-row .fourth-square .pink-light {
+  position: absolute;
+  bottom: 0;
+  right: 38px;
+  width: 38px;
+  height: 65px;
+  background-color: #f9b3d3;
+  border-top: 4px solid #162645;
+  border-left: 4px solid #162645;
+}
+.second-row .fourth-square .bg-white-box {
+  width: 76px;
+  height: 65px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.second-row .fourth-square .bg-white-box .circle-light-blue {
+  margin-left: 2px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 4px solid #162645;
+  background-color: #75c3d1;
+}
+.second-row .fourth-square .bg-white-box .horizontal-line {
+  position: absolute;
+  right: 0;
+  top: 30px;
+  width: 24px;
+  height: 4px;
+  background-color: #162645;
+}
+.second-row .fourth-square .vertical-line {
+  width: 4px;
+  height: 16px;
+  background-color: #162645;
+  position: absolute;
+  right: 34px;
+  bottom: 65px;
+}
+.second-row .fiveth-square {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  position: relative;
+  background-color: #ff4794;
+  border-right: 4px solid #162645;
+  border-bottom: 4px solid #162645;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.second-row .fiveth-square .circle-cup {
+  position: absolute;
+  bottom: -2px;
+  width: 100px;
+  height: 70px;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  background-color: #162645;
+}
+.second-row .fiveth-square .circle-cup::before {
+  content: "";
+  display: block;
+  width: 92%;
+  height: 10px;
+  border: 4px solid #162645;
+  background-color: white;
+}
+.second-row .fiveth-square .vertical-line {
+  width: 4px;
+  height: 60px;
+  background-color: #162645;
+  position: absolute;
+  bottom: 68px;
+  left: 82px;
+}
+.second-row .fiveth-square .horizontal-line {
+  width: 100%;
+  height: 4px;
+  background-color: #162645;
+  position: absolute;
+  top: 30px;
+  left: 0;
+}
